@@ -1,9 +1,7 @@
 $(document).ready(function() {
-
     var cartoons = ["bugs bunny", "mickey mouse", "tweety", "popeye", 
     "duffy duck", "goofy", "betty boop", "peter griffin", "sylvester", 
     "donald duck","homer simpson","fred flinstone","the grinch"];
-
     function displayGifButtons() {
         $("#gifButtonsView").empty();
         for (var i = 0; i < cartoons.length; i++) {
@@ -19,16 +17,11 @@ $(document).ready(function() {
     function addNewButton() {
         $("#addGif").on("click", function() {
             var gifNewInput = $("<input>");
-
-
-            // <input type="input" class="form-control" 
-            // id="cartoon-input" placeholder="Add a Cartoon Char">
             var action = $("#cartoon-input").val().trim();
             if (action == "") {
                 return false; // added so user cannot add a blank button
             }
             cartoons.push(action);
-
             displayGifButtons();
             gifNewInput.attr("placeholder","Add a Cartoon Char")
             $("#form-control").append(gifNewInput);
@@ -52,7 +45,6 @@ $(document).ready(function() {
                     alert("There isn't a gif for this selected button");
                 }
                 for (var i = 0; i < results.length; i++) {
-
                     var gifDiv = $("<div>"); //div for the gifs to go inside
                     gifDiv.addClass("gifDiv");
                     // pulling rating of gif
@@ -75,7 +67,6 @@ $(document).ready(function() {
     // Calling Functions & Methods
     displayGifButtons(); // displays list of actions already created
     addNewButton();
-
     // Document Event Listeners
     $(document).on("click", ".action", displayGifs);
     $(document).on("click", ".image", function() {
