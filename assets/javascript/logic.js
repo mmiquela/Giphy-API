@@ -1,7 +1,5 @@
 $(document).ready(function() {
-    var cartoons = ["bugs bunny", "mickey mouse", "tweety", "popeye", 
-    "duffy duck", "goofy", "betty boop", "peter griffin", "sylvester", 
-    "donald duck","homer simpson","fred flinstone","the grinch"];
+    var cartoons = ["bugs bunny", "mickey mouse", "tweety", "popeye","duffy duck", "goofy", "betty boop", "peter griffin", "sylvester", "donald duck", "homer simpson", "fred flinstone", "the grinch"];
     function displayGifButtons() {
         $("#gifButtonsView").empty();
         for (var i = 0; i < cartoons.length; i++) {
